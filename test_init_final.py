@@ -1271,9 +1271,6 @@ while True:
 							now2 = datetime.datetime.now() + datetime.timedelta(hours = int(basicSetting[0]))
 							tmp_now = datetime.datetime.now() + datetime.timedelta(hours = int(basicSetting[0]))
 							tmp_now = tmp_now.replace(hour=int(hours1), minute=int(minutes1))
-							print('chkpos: {}'.format(chkpos))
-							print('hours1: {}'.format(hours1))
-							print('minutes1: {}'.format(minutes1))
 						else:
 							# 보스컷1000
 							chkpos = len(hello)-2
@@ -1282,23 +1279,22 @@ while True:
 							now2 = datetime.datetime.now() + datetime.timedelta(hours = int(basicSetting[0]))
 							tmp_now = datetime.datetime.now() + datetime.timedelta(hours = int(basicSetting[0]))
 							tmp_now = tmp_now.replace(hour=int(hours1), minute=int(minutes1))
-							print('chkpos: {}'.format(chkpos))
-							print('hours1: {}'.format(hours1))
-							print('minutes1: {}'.format(minutes1))
 					else:
 						# 보스컷
 						now2 = datetime.datetime.now() + datetime.timedelta(hours = int(basicSetting[0]))
 						tmp_now = now2
-						print('3333333333333333333333333333333333333333')
 
 					bossFlag[i] = False
 					bossFlag0[i] = False
 					bossMungFlag[i] = False
 					bossMungCnt[i] = 0
-					"""
+					print('hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh')
+					print('now: {}'.format(now2.strftime('%H:%M:%S'))
+					print('temp_now: {}'.format(tmp_now.strftime('%H:%M:%S'))
 					if tmp_now > now2 :
 						tmp_now = tmp_now + datetime.timedelta(days=int(-1))
-						print('1111111111111111111111111')
+					      	print('1111111111111111111111111111')
+						print('temp_now: {}'.format(tmp_now.strftime('%H:%M:%S'))
 						
 					if tmp_now < now2 : 
 						deltaTime = datetime.timedelta(hours = int(bossData[i][1]), minutes = int(bossData[i][5]))
@@ -1308,10 +1304,12 @@ while True:
 						now2 = tmp_now
 						bossMungCnt[i] = bossMungCnt[i] - 1
 						print('2222222222222222222222222')
+						print('now2: {}'.format(now2.strftime('%H:%M:%S'))
 					else :
 						now2 = now2 + datetime.timedelta(hours = int(bossData[i][1]), minutes = int(bossData[i][5]))
 						print('333333333333333333333333333')
-					"""
+						print('now2: {}'.format(now2.strftime('%H:%M:%S'))
+					
 								
 					tmp_bossTime[i] = bossTime[i] = nextTime = now2
 					tmp_bossTimeString[i] = bossTimeString[i] = nextTime.strftime('%H:%M:%S')
@@ -1321,7 +1319,6 @@ while True:
 							color=0xff0000
 							)
 					await client.get_channel(channel).send(embed=embed, tts=False)
-					print('zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz')
 					
 
 				################ 보스 멍 처리 ################ 
