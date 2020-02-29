@@ -1310,6 +1310,7 @@ while True:
 							color=0xff0000
 							)
 					await client.get_channel(channel).send(embed=embed, tts=False)
+					print('zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz')
 					
 
 				################ 보스 멍 처리 ################ 
