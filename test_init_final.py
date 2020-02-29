@@ -1264,22 +1264,29 @@ while True:
 					print('@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@')
 					if len(hello) > len(tmp_msg) + 3 :
 						if hello.find(':') != -1 :
+							# 보스컷10:00
 							chkpos = hello.find(':')
 							hours1 = hello[chkpos-2:chkpos]
 							minutes1 = hello[chkpos+1:chkpos+3]
 							now2 = datetime.datetime.now() + datetime.timedelta(hours = int(basicSetting[0]))
 							tmp_now = datetime.datetime.now() + datetime.timedelta(hours = int(basicSetting[0]))
 							tmp_now = tmp_now.replace(hour=int(hours1), minute=int(minutes1))
-							print('11111111111111111111111111111111111111')
+							print('chkpos: ' + chkpos);
+							print('hours1: ' + hours1);
+							print('minutes1: ' + minutes1);
 						else:
+							# 보스컷1000
 							chkpos = len(hello)-2
 							hours1 = hello[chkpos-2:chkpos]
 							minutes1 = hello[chkpos:chkpos+2]
 							now2 = datetime.datetime.now() + datetime.timedelta(hours = int(basicSetting[0]))
 							tmp_now = datetime.datetime.now() + datetime.timedelta(hours = int(basicSetting[0]))
 							tmp_now = tmp_now.replace(hour=int(hours1), minute=int(minutes1))
-							print('2222222222222222222222222222222222222')
+							print('chkpos: ' + chkpos);
+							print('hours1: ' + hours1);
+							print('minutes1: ' + minutes1);
 					else:
+						# 보스컷
 						now2 = datetime.datetime.now() + datetime.timedelta(hours = int(basicSetting[0]))
 						tmp_now = now2
 						print('3333333333333333333333333333333333333333')
@@ -1295,7 +1302,7 @@ while True:
 					if tmp_now < now2 : 
 						deltaTime = datetime.timedelta(hours = int(bossData[i][1]), minutes = int(bossData[i][5]))
 						while now2 > tmp_now :
-							tmp_now = tmp_now + deltaTime
+							tmp_now = tmp_now + deltaTime  
 							bossMungCnt[i] = bossMungCnt[i] + 1
 						now2 = tmp_now
 						bossMungCnt[i] = bossMungCnt[i] - 1
