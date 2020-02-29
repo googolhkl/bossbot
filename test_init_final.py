@@ -1261,6 +1261,7 @@ while True:
 						bossData[i][6] = ''
 						
 					tmp_msg = bossData[i][0] +'컷'
+					print('@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@')
 					if len(hello) > len(tmp_msg) + 3 :
 						if hello.find(':') != -1 :
 							chkpos = hello.find(':')
