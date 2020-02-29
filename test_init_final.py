@@ -1261,7 +1261,6 @@ while True:
 						bossData[i][6] = ''
 						
 					tmp_msg = bossData[i][0] +'컷'
-					print('@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@')
 					if len(hello) > len(tmp_msg) + 3 :
 						if hello.find(':') != -1 :
 							# 보스컷10:00
@@ -1288,13 +1287,8 @@ while True:
 					bossFlag0[i] = False
 					bossMungFlag[i] = False
 					bossMungCnt[i] = 0
-					print('hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh')
-					print('now: {}'.format(now2.strftime('%H:%M:%S')))
-					print('temp_now: {}'.format(tmp_now.strftime('%H:%M:%S')))
 					if tmp_now > now2 :
 						tmp_now = tmp_now + datetime.timedelta(days=int(-1))
-						print('1111111111111111111111111111')
-						print('temp_now: {}'.format(tmp_now.strftime('%H:%M:%S')))
 						
 					if tmp_now < now2 : 
 						deltaTime = datetime.timedelta(hours = int(bossData[i][1]), minutes = int(bossData[i][5]))
@@ -1303,12 +1297,9 @@ while True:
 							bossMungCnt[i] = bossMungCnt[i] + 1
 						now2 = tmp_now
 						bossMungCnt[i] = bossMungCnt[i] - 1
-						print('2222222222222222222222222')
-						print('now2: {}'.format(now2.strftime('%H:%M:%S')))
+
 					else :
 						now2 = now2 + datetime.timedelta(hours = int(bossData[i][1]), minutes = int(bossData[i][5]))
-						print('333333333333333333333333333')
-						print('now2: {}'.format(now2.strftime('%H:%M:%S')))
 					
 								
 					tmp_bossTime[i] = bossTime[i] = nextTime = now2
