@@ -1271,9 +1271,9 @@ while True:
 							now2 = datetime.datetime.now() + datetime.timedelta(hours = int(basicSetting[0]))
 							tmp_now = datetime.datetime.now() + datetime.timedelta(hours = int(basicSetting[0]))
 							tmp_now = tmp_now.replace(hour=int(hours1), minute=int(minutes1))
-							print('chkpos: ' + chkpos);
-							print('hours1: ' + hours1);
-							print('minutes1: ' + minutes1);
+							print('chkpos: {}'.format(chkpos))
+							print('hours1: {}'.format(hours1))
+							print('minutes1: {}'.format(minutes1))
 						else:
 							# 보스컷1000
 							chkpos = len(hello)-2
@@ -1282,9 +1282,9 @@ while True:
 							now2 = datetime.datetime.now() + datetime.timedelta(hours = int(basicSetting[0]))
 							tmp_now = datetime.datetime.now() + datetime.timedelta(hours = int(basicSetting[0]))
 							tmp_now = tmp_now.replace(hour=int(hours1), minute=int(minutes1))
-							print('chkpos: ' + chkpos);
-							print('hours1: ' + hours1);
-							print('minutes1: ' + minutes1);
+							print('chkpos: {}'.format(chkpos))
+							print('hours1: {}'.format(hours1))
+							print('minutes1: {}'.format(minutes1))
 					else:
 						# 보스컷
 						now2 = datetime.datetime.now() + datetime.timedelta(hours = int(basicSetting[0]))
