@@ -1261,7 +1261,7 @@ while True:
 						bossData[i][6] = ''
 						
 					tmp_msg = bossData[i][0] +'컷'
-					test = ''
+					test = 'tttt'
 					if len(hello) > len(tmp_msg) + 3 :
 						if hello.find(':') != -1 :
 							chkpos = hello.find(':')
@@ -1282,6 +1282,7 @@ while True:
 					else:
 						now2 = datetime.datetime.now() + datetime.timedelta(hours = int(basicSetting[0]))
 						tmp_now = now2
+						test = 3
 
 					bossFlag[i] = False
 					bossFlag0[i] = False
@@ -1305,7 +1306,7 @@ while True:
 					tmp_bossTimeString[i] = bossTimeString[i] = nextTime.strftime('%H:%M:%S')
 					tmp_bossDateString[i] = bossDateString[i] = nextTime.strftime('%Y-%m-%d')
 					embed = discord.Embed(
-							description= '```다음 ' + bossData[i][0] + ' ' + bossTimeString[i] + '입니다.' + 'hello' + '```',
+							description= '```다음 ' + bossData[i][0] + ' ' + bossTimeString[i] + '입니다.' + 'test: ' + test + '```',
 							color=0xff0000
 							)
 					await client.get_channel(channel).send(embed=embed, tts=False)
