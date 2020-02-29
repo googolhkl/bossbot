@@ -1270,6 +1270,7 @@ while True:
 							now2 = datetime.datetime.now() + datetime.timedelta(hours = int(basicSetting[0]))
 							tmp_now = datetime.datetime.now() + datetime.timedelta(hours = int(basicSetting[0]))
 							tmp_now = tmp_now.replace(hour=int(hours1), minute=int(minutes1))
+							print('11111111111111111111111111111111111111')
 						else:
 							chkpos = len(hello)-2
 							hours1 = hello[chkpos-2:chkpos]
@@ -1277,9 +1278,11 @@ while True:
 							now2 = datetime.datetime.now() + datetime.timedelta(hours = int(basicSetting[0]))
 							tmp_now = datetime.datetime.now() + datetime.timedelta(hours = int(basicSetting[0]))
 							tmp_now = tmp_now.replace(hour=int(hours1), minute=int(minutes1))
+							print('2222222222222222222222222222222222222')
 					else:
 						now2 = datetime.datetime.now() + datetime.timedelta(hours = int(basicSetting[0]))
 						tmp_now = now2
+						print('3333333333333333333333333333333333333333')
 
 					bossFlag[i] = False
 					bossFlag0[i] = False
