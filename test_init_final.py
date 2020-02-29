@@ -1298,6 +1298,7 @@ while True:
 
 					if tmp_now > now2 :
 						tmp_now = tmp_now + datetime.timedelta(days=int(-1))
+						print('1111111111111111111111111')
 						
 					if tmp_now < now2 : 
 						deltaTime = datetime.timedelta(hours = int(bossData[i][1]), minutes = int(bossData[i][5]))
@@ -1306,8 +1307,10 @@ while True:
 							bossMungCnt[i] = bossMungCnt[i] + 1
 						now2 = tmp_now
 						bossMungCnt[i] = bossMungCnt[i] - 1
+						print('2222222222222222222222222')
 					else :
 						now2 = now2 + datetime.timedelta(hours = int(bossData[i][1]), minutes = int(bossData[i][5]))
+						print('333333333333333333333333333')
 								
 					tmp_bossTime[i] = bossTime[i] = nextTime = now2
 					tmp_bossTimeString[i] = bossTimeString[i] = nextTime.strftime('%H:%M:%S')
