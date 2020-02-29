@@ -1295,7 +1295,7 @@ while True:
 					bossFlag0[i] = False
 					bossMungFlag[i] = False
 					bossMungCnt[i] = 0
-
+					"""
 					if tmp_now > now2 :
 						tmp_now = tmp_now + datetime.timedelta(days=int(-1))
 						print('1111111111111111111111111')
@@ -1311,6 +1311,7 @@ while True:
 					else :
 						now2 = now2 + datetime.timedelta(hours = int(bossData[i][1]), minutes = int(bossData[i][5]))
 						print('333333333333333333333333333')
+					"""
 								
 					tmp_bossTime[i] = bossTime[i] = nextTime = now2
 					tmp_bossTimeString[i] = bossTimeString[i] = nextTime.strftime('%H:%M:%S')
